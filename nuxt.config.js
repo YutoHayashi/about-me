@@ -51,7 +51,14 @@ export default {
   build: {
   },
 
-  assetPrefix: 'self-introduction',
+  router: {
+    base: '/self-introduction'
+  },
+
+  generate: {
+    dir: 'docs',
+    dubFolders: false
+  },
 
   server: {
     host: '0',
