@@ -52,7 +52,7 @@ export default {
   },
 
   router: {
-    base: '/self-introduction'
+    base: '/self-introduction/'
   },
 
   generate: {
