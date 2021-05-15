@@ -51,6 +51,8 @@ export default {
   build: {
   },
 
+  assetPrefix: 'self-introduction',
+
   server: {
     host: '0',
     port: 3000
