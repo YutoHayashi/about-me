@@ -1,0 +1,26 @@
+@each $themeName, $themeValue in $themes {
+    .#{$themeName} {
+        $colorVariation: createColorVariation( $themeValue );
+        @each $colorAlias, $colorValue in $colorVariation {
+            &-#{$colorAlias} {
+                &-text { color: $colorValue; }
+                &-bg { background-color: $colorValue; }
+                &-border {
+                    border: 1px solid $colorValue;
+                    &-right { border-right: 1px solid $colorValue; }
+                    &-left { border-left: 1px solid $colorValue; }
+                    &-top { border-top: 1px solid $colorValue; }
+                    &-bottom { border-bottom: 1px solid $colorValue; }
+                }
+            }
+        }
+    }
+}
+@each $themeName, $themeValue in $themes {
+    :root {
+        $colorVariation: createColorVariation( $themeValue );
+        @each $colorAlias, $colorValue in $colorVariation {
+            --#{$themeName}-#{$colorAlias}: #{$colorValue};
+        }
+    }
+}

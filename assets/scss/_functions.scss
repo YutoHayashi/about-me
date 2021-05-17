@@ -1,0 +1,26 @@
+@function createColorVariation( $color ) {
+    $base: $color;
+    $lighten1: lighten( adjust-hue( $color, 0 ), 10% );
+    $lighten2: lighten( adjust-hue( $color, 0 ), 15% );
+    $lighten3: lighten( adjust-hue( $color, 0 ), 20% );
+    $lighten4: lighten( adjust-hue( $color, 0 ), 25% );
+    $lighten5: lighten( adjust-hue( $color, 0 ), 30% );
+    $darken1: darken( adjust-hue( $color, 0 ), 10% );
+    $darken2: darken( adjust-hue( $color, 0 ), 15% );
+    $darken3: darken( adjust-hue( $color, 0 ), 20% );
+    $darken4: darken( adjust-hue( $color, 0 ), 25% );
+    $darken5: darken( adjust-hue( $color, 0 ), 30% );
+    @return (
+        'base': $base,
+        'lighten1': $lighten1,
+        'lighten2': $lighten2,
+        'lighten3': $lighten3,
+        'lighten4': $lighten4,
+        'lighten5': $lighten5,
+        'darken1': $darken1,
+        'darken2': $darken2,
+        'darken3': $darken3,
+        'darken4': $darken4,
+        'darken5': $darken5,
+    );
+}

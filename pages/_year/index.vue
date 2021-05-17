@@ -2,12 +2,8 @@
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend( {
-    data: (  ) => {
-        return {
-            years: [ 2021, ],
-        };
+    created(  ) {
+        this.$router.push( `${this.$route.params.year}/01` );
     },
 } )
 </script>
-<style lang="scss">
-</style>

@@ -1,0 +1,17 @@
+@mixin break( $breakpoint: break ) {
+    @media #{map-get( $breakpoints, $breakpoint )} {
+        @content;
+    }
+}
+@mixin responsive( $class, $breakpoint: $breakpoints ) {
+    #{$class} {
+        @content;
+    }
+    @each $suffix, $value in $breakpoint {
+        @media #{$value} {
+            #{$class}-#{$suffix} {
+                @content;
+            }
+        }
+    }
+}

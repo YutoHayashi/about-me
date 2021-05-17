@@ -1,6 +1,5 @@
 <template>
-<div id="default">
-    <default-molecules-header />
+<div id="version-2021">
     <Nuxt />
 </div>
 </template>
