@@ -4,8 +4,8 @@
         <h1 class="heading__wrap-label">/自己紹介</h1>
         <ul class="heading__wrap-links l__Dsp-flex">
             <li class="heading__wrap-links-item" v-for="linkItem in linkItems" :key="linkItem.label">
-                <a target="_self" :href="linkItem.href">
-                    <button :class="`heading__wrap-links-item-button ${ linkItem.color }-darken2-border ${ linkItem.color }-darken2-text`" role="button">{{ linkItem.label }}</button>
+                <a target="_blank" :href="linkItem.href">
+                    <button :class="`heading__wrap-links-item-button ${ linkItem.color }-darken2-border white-base-text-hover ${ linkItem.color }-darken2-text ${linkItem.color}-darken2-bg-hover`" role="button">{{ linkItem.label }}</button>
                 </a>
             </li>
         </ul>
